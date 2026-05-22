@@ -16,10 +16,12 @@ jobs:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Install Tectonic Natively
+      - name: Install Tectonic Standalone Binary
         run: |
-          sudo apt-get update
-          sudo apt-get install -y tectonic
+          mkdir -p $HOME/.local/bin
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          mv tectonic $HOME/.local/bin/
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Compile LaTeX to PDF
         run: |
