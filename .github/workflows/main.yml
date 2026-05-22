@@ -11,17 +11,17 @@ on:
 jobs:
   build-resume:
     runs-on: ubuntu-latest
+    # Run the job inside a stable Fedora container to avoid the Ubuntu glibc memory bug
+    container:
+      image: fedora:latest
 
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Install Tectonic Standalone Binary
+      - name: Install Tectonic Natively
         run: |
-          mkdir -p $HOME/.local/bin
-          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
-          mv tectonic $HOME/.local/bin/
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          dnf install -y tectonic
 
       - name: Compile LaTeX to PDF
         run: |
