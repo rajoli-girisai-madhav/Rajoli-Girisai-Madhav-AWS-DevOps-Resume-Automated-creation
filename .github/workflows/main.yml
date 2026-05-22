@@ -8,6 +8,9 @@ on:
       - 'main.tex'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-resume:
     runs-on: ubuntu-latest
@@ -22,8 +25,14 @@ jobs:
           root_file: main.tex
           compiler: xelatex
 
-      - name: Upload Generated PDF Document
-        uses: actions/upload-artifact@v4
-        with:
-          name: Clickable_Resume_PDF
-          path: main.pdf
+      - name: Rename PDF Document
+        run: |
+          mv main.pdf "Rajoli Girisai Madhav 3 Years AWS DevOps Resume.pdf"
+
+      - name: Commit and Push Raw PDF
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add "Rajoli Girisai Madhav 3 Years AWS DevOps Resume.pdf"
+          git commit -m "chore: automated pdf generation [skip ci]" || echo "No changes to commit"
+          git push origin main
