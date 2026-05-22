@@ -6,19 +6,20 @@ on:
       - main
     paths:
       - 'main.tex'
-  workflow_dispatch: # Allows you to manually trigger the build from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build-resume:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Setup Tectonic Compiler Engine
-        uses: tectonic-typesetting/setup-tectonic@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Tectonic Natively
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tectonic
 
       - name: Compile LaTeX to PDF
         run: |
