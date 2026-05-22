@@ -11,21 +11,16 @@ on:
 jobs:
   build-resume:
     runs-on: ubuntu-latest
-    # Run the job inside a stable Fedora container to avoid the Ubuntu glibc memory bug
-    container:
-      image: fedora:latest
 
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Install Tectonic Natively
-        run: |
-          dnf install -y tectonic
-
       - name: Compile LaTeX to PDF
-        run: |
-          tectonic main.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          compiler: xelatex
 
       - name: Upload Generated PDF Document
         uses: actions/upload-artifact@v4
