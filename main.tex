@@ -1,0 +1,234 @@
+%-------------------------
+% Resume in Latex
+% Author : Rajoli Girisai Madhav
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-44pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% RE-ENGINEERED FOR PERFECT SPACING CONSISTENCY
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt, parsep=2pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=2pt, parsep=0pt, topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Rajoli Girisai Madhav} \\ \vspace{5pt}
+    \small\faPhone*~9121775542 \quad | \quad 
+    \faEnvelope~\href{mailto:rajoligirisai.madhav@gmail.com}{rajoligirisai.madhav@gmail.com} \quad | \quad 
+    \faLinkedin~\href{https://linkedin.com/in/rajoli-girisai-madhav}{linkedin.com/in/rajoli-girisai-madhav} \\ \vspace{2pt}
+    \faGithub~\href{https://github.com/rajoli-girisai-madhav}{github.com/rajoli-girisai-madhav} \quad | \quad 
+    \faGlobe~\href{https://rajoligirisaimadhav.online}{rajoligirisaimadhav.online}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{PROFESSIONAL SUMMARY}
+\noindent \textbf{AWS DevOps Engineer} with \textbf{3+ years of experience} in designing, automating, and managing \textbf{highly available cloud infrastructure on AWS}. Expertise in \textbf{Terraform (IaC)}, \textbf{GitHub Actions CI/CD}, \textbf{Docker}, and \textbf{cloud networking}. Proven track record in building \textbf{multi-tier, multi-region platforms} and serverless deployment pipelines that \textbf{reduced deployment time by 70\%+} while maintaining \textbf{99.9\% uptime}. Passionate about \textbf{infrastructure automation} and delivering reliable, scalable systems.
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt, parsep=2pt]
+    \small{\item{
+     \textbf{Cloud \& IaC} {: AWS (EC2, VPC, S3, RDS, IAM, ALB, Auto Scaling, CloudFront, Route 53, WAF, ACM, SNS, Textract, Rekognition, Lex), Terraform (Modules, Workspaces, S3 Backend + State Locking), GitHub Actions CI/CD}\vspace{2pt} \\
+     \textbf{Containers \& Orchestration} {: Docker, Kubernetes (Fundamentals)}\vspace{2pt} \\
+     \textbf{Monitoring \& Observability} {: CloudWatch, AppDynamics}\vspace{2pt} \\
+     \textbf{Scripting \& Version control} {: Bash/Shell Scripting, Git, GitHub}\vspace{2pt} \\
+     \textbf{Databases} {: Oracle SQL, MySQL}\vspace{2pt} \\
+     \textbf{Operating Systems} {: Linux, Unix, Stratus VOS}\vspace{2pt} \\
+     \textbf{Tools \& Collaboration} {: JIRA, Confluence}\vspace{2pt} \\
+     \textbf{Mainframe \& Legacy Systems} {: Mainframe/COBOL (Transaction Processing, Screen Maps), IBM DB2, File Processing, Operational Monitoring, Logging Mechanisms}
+    }}
+\end{itemize}
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{PROFESSIONAL EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {AWS DevOps Engineer}{Aug 2025 -- Present}
+      {Vcube Software Solutions}{Hyderabad, India}
+      
+      %--- Project 1 Header ---
+      \vspace{2pt}
+      \noindent\textbf{Project:} Production-Ready Multi-Region 3-Tier AWS Platform (Terraform + CI/CD) \\
+      \small{\textbf{Tech Stack:} AWS, Terraform (IaC), GitHub Actions, CI/CD, VPC, EC2, ASG, ALB, Multi-AZ, S3 Remote Backend, Cloud Networking, Linux} \\
+      \small{\textbf{GitHub:} \href{https://github.com/rajoli-girisai-madhav/aws-3tier-multi-region-terraform-platform}{https://github.com/rajoli-girisai-madhav/aws-3tier-multi-region-terraform-platform}}
+      
+      \resumeItemListStart
+        \resumeItem{Designed a \textbf{multi-tier AWS architecture} using \textbf{Terraform}, enabling multi-region deployments across multi-AZ environments, ensuring fault tolerance and \textbf{99.9\% uptime}.}
+        \resumeItem{Built \textbf{CI/CD pipelines} using \textbf{GitHub Actions matrix strategy}, automating deployments across dev, QA, and production environments with structured validation workflows.}
+        \resumeItem{\textbf{Reduced deployment time by 70\%+} (under 15 minutes) through Infrastructure as Code (IaC), eliminating manual provisioning delays and improving delivery efficiency.}
+        \resumeItem{Introduced \textbf{approval-based deployment controls} enhancing release governance, reducing production risks, and strengthening compliance across enterprise deployment workflows.}
+        \resumeItem{Engineered AWS networking architecture including \textbf{VPC, subnets, route tables, and security groups}, enabling scalable compute using EC2, Auto Scaling Groups (ASG), and ALB.}
+        \resumeItem{Implemented \textbf{S3 remote state management with locking mechanisms}, reducing configuration conflicts by \textbf{~60\%} and improving collaboration across engineering teams.}
+        \resumeItem{Enabled \textbf{centralized logging and monitoring} improving system visibility, debugging efficiency, and proactive incident detection across environments.}
+      \resumeItemListEnd
+
+      %--- Project 2 Header ---
+      \vspace{4pt}
+      \noindent\textbf{Project:} Serverless CI/CD Pipeline for React Application (S3, Route 53, CloudFront, ACM \& WAF) \\
+      \small{\textbf{Tech Stack:} AWS, GitHub Actions, CI/CD, Amazon S3, CloudFront, Route 53, AWS Certificate Manager (ACM), AWS WAF, AWS CLI, React, Serverless Hosting, DNS Management} \\
+      \small{\textbf{GitHub:} \href{https://github.com/rajoli-girisai-madhav/react-aws-devops-portfolio}{https://github.com/rajoli-girisai-madhav/react-aws-devops-portfolio}}
+      
+      \resumeItemListStart
+        \resumeItem{Built a fully automated \textbf{CI/CD pipeline} using \textbf{GitHub Actions}, enabling continuous build, test, and deployment workflows for frontend React applications.}
+        \resumeItem{Hosted the application on \textbf{Amazon S3 integrated with CloudFront CDN}, ensuring scalable global content delivery with low-latency access.}
+        \resumeItem{Configured \textbf{Route 53 domain routing} with custom domain mapping, enabling reliable traffic routing and production-grade DNS resolution.}
+        \resumeItem{Enforced \textbf{HTTPS encryption using AWS Certificate Manager (ACM)}, securing application communication across edge and origin layers.}
+        \resumeItem{Strengthened application security using \textbf{AWS WAF rules}, preventing unauthorized access attempts and protecting application endpoints.}
+        \resumeItem{Automated deployments using \textbf{AWS CLI (S3 sync)} with version-controlled artifacts, ensuring consistent, repeatable, and traceable release processes.}
+        \resumeItem{Implemented a \textbf{CloudFront cache invalidation strategy}, ensuring immediate propagation of updates without stale content delivery.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Info Tech Senior Associate}{May 2022 -- Dec 2024}
+      {NTT Data}{Bangalore, India}
+      
+      \resumeItemListStart
+        \resumeItem{Automated operational workflows using \textbf{Bash/Shell scripting}, improving execution efficiency and reducing repetitive manual tasks.}
+        \resumeItem{Built and maintained monitoring and alerting systems using \textbf{AppDynamics}, enabling proactive anomaly detection and faster incident response.}
+        \resumeItem{Managed \textbf{high-volume production transaction systems} ensuring \textbf{99.9\% uptime} across mission-critical enterprise workloads.}
+        \resumeItem{Reduced incident resolution time by \textbf{25--30\%} through structured \textbf{Root Cause Analysis (RCA)}, debugging, and proactive operational support.}
+        \resumeItem{Ensured compliance with \textbf{Visa/MasterCard financial regulations}, maintaining secure and reliable transaction processing standards.}
+        \resumeItem{Improved system stability, performance visibility, and operational reliability through continuous \textbf{production monitoring and observability} practices.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL HIGHLIGHTS-----------
+\section{PROFESSIONAL HIGHLIGHTS}
+  \resumeItemListStart
+    \resumeItem{\textbf{Cloud Infrastructure \& Automation:} Experienced in building highly available AWS infrastructure using Terraform, CI/CD automation, and cloud-native deployment workflows.}
+    \resumeItem{\textbf{Production Operations:} Strong background in production operations, monitoring, and incident management across enterprise-scale systems.}
+    \resumeItem{\textbf{Architecture Design:} Skilled in designing scalable multi-tier cloud architectures with a sharp focus on reliability, automation, and operational efficiency.}
+    \resumeItem{\textbf{Networking \& Security:} Hands-on experience with cloud networking, security controls, and deployment governance across distributed environments.}
+  \resumeItemListEnd
+
+%-----------CERTIFICATIONS \& ACCOMPLISHMENTS-----------
+\section{CERTIFICATIONS \& ACCOMPLISHMENTS}
+  \resumeItemListStart
+    \resumeItem{Mainframe Application Developer -- NTT DATA}
+    \resumeItem{Financial Systems Certification -- NTT DATA}
+    \resumeItem{SQL (Intermediate) -- HackerRank}
+    \resumeItem{Performance Excellence Award -- 100\% SLA compliance}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {S.V. College of Engineering}{Sep 2017 -- Aug 2021}
+      {Bachelor of Technology (B.Tech) -- Electrical and Electronics Engineering}{Chittoor, India}
+  \resumeSubHeadingListEnd
+
+\end{document}
