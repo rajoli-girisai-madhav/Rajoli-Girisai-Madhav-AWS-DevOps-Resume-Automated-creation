@@ -1,1 +1,0 @@
-# Rajoli-Girisai-Madhav-AWS-DevOps-Resume-Automated-creation
