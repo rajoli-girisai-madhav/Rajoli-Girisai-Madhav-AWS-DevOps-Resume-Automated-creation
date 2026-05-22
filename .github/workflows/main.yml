@@ -6,11 +6,11 @@ on:
       - main
     paths:
       - 'main.tex'
+  workflow_dispatch: # Allows you to manually trigger the build from the Actions tab
 
 jobs:
   build-resume:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
