@@ -135,15 +135,15 @@
 
 %-----------PROFESSIONAL SUMMARY-----------
 \section{PROFESSIONAL SUMMARY}
-\noindent \textbf{AWS DevOps Engineer} with \textbf{3+ years of experience} in designing, automating, and managing \textbf{highly available cloud infrastructure on AWS}. Expertise in \textbf{Terraform (IaC)}, \textbf{GitHub Actions CI/CD}, \textbf{Docker}, and \textbf{cloud networking}. Proven track record in building \textbf{multi-tier, multi-region platforms} and serverless deployment pipelines that \textbf{reduced deployment time by 70\%+} while maintaining \textbf{99.9\% uptime}. Passionate about \textbf{infrastructure automation} and delivering reliable, scalable systems.
+\noindent \textbf{AWS DevOps Engineer} with \textbf{3+ years of experience} in designing, automating, and managing \textbf{highly available cloud infrastructure on AWS}. Expertise in \textbf{Terraform (IaC)}, \textbf{GitHub Actions CI/CD}, \textbf{Docker}, \textbf{Amazon EKS}, \textbf{Kubernetes}, \textbf{Prometheus}, \textbf{Grafana}, and \textbf{cloud networking}. Proven track record in building \textbf{multi-tier, multi-region platforms} and serverless deployment pipelines that \textbf{reduced deployment time by 70\%+} while maintaining \textbf{99.9\% uptime}. Passionate about \textbf{infrastructure automation} and delivering reliable, scalable systems.
 
 %-----------TECHNICAL SKILLS-----------
 \section{TECHNICAL SKILLS}
 \begin{itemize}[leftmargin=0in, label={}, itemsep=0pt, parsep=2pt]
     \small{\item{
-     \textbf{Cloud \& IaC} {: AWS (EC2, VPC, S3, RDS, IAM, ALB, Auto Scaling, CloudFront, Route 53, WAF, ACM, SNS, Textract, Rekognition, Lex), Terraform (Modules, Workspaces, S3 Backend + State Locking), GitHub Actions CI/CD}\vspace{2pt} \\
-     \textbf{Containers \& Orchestration} {: Docker, Kubernetes (Fundamentals)}\vspace{2pt} \\
-     \textbf{Monitoring \& Observability} {: CloudWatch, AppDynamics}\vspace{2pt} \\
+     \textbf{Cloud \& IaC} {: AWS (EKS, ECR, EC2, VPC, S3, RDS, IAM, ALB, Auto Scaling, CloudFront, Route 53, WAF, ACM, SNS, Textract, Rekognition, Lex), Terraform (Modules, Workspaces, S3 Backend + State Locking), GitHub Actions CI/CD}\vspace{2pt} \\
+     \textbf{Containers \& Orchestration} {: Docker, Kubernetes (EKS, Deployments, Services, Ingress, HPA), Amazon EKS, Amazon ECR}\vspace{2pt} \\
+     \textbf{Monitoring \& Observability} {: Prometheus, Grafana, CloudWatch, AppDynamics, Alertmanager}\vspace{2pt} \\
      \textbf{Scripting \& Version control} {: Bash/Shell Scripting, Git, GitHub}\vspace{2pt} \\
      \textbf{Databases} {: Oracle SQL, MySQL}\vspace{2pt} \\
      \textbf{Operating Systems} {: Linux, Unix, Stratus VOS}\vspace{2pt} \\
@@ -192,6 +192,23 @@
         \resumeItem{Implemented a \textbf{CloudFront cache invalidation strategy}, ensuring immediate propagation of updates without stale content delivery.}
       \resumeItemListEnd
 
+      
+      %--- Project 3 Header ---
+      \vspace{4pt}
+      \noindent\textbf{Project:} Production-Grade Application Deployment and Monitoring Platform on AWS EKS using Docker, ECR, Prometheus, Grafana, and GitHub Actions \\
+      \small{\textbf{Tech Stack:} Amazon EKS, Amazon ECR, Docker, Kubernetes, GitHub Actions, Prometheus, Grafana, HPA, Ingress, AWS Load Balancer Controller} \\
+      \small{\textbf{GitHub:} \href{https://github.com/your-repository}{https://github.com/rajoli-girisai-madhav/aws-eks-docker-ecr-prometheus-grafana-platform}}
+      
+      \resumeItemListStart
+        \resumeItem{Designed and deployed a \textbf{containerized application platform} on \textbf{Amazon EKS} using \textbf{Docker} and \textbf{Amazon ECR}.}
+        \resumeItem{Built automated \textbf{CI/CD pipelines} using \textbf{GitHub Actions} for container image build, versioning, and deployment workflows.}
+        \resumeItem{Implemented \textbf{Kubernetes Deployments, Services, and Ingress} resources for scalable and highly available workload management.}
+        \resumeItem{Integrated \textbf{Prometheus} for infrastructure and application metrics collection across Kubernetes workloads and cluster resources.}
+        \resumeItem{Developed \textbf{Grafana dashboards} providing \textbf{100\% visibility across cluster nodes, pods, deployments, and workloads}.}
+        \resumeItem{Configured \textbf{Horizontal Pod Autoscaling (HPA)} and health checks to improve application resilience, scalability, and self-healing capabilities.}
+        \resumeItem{Implemented proactive monitoring and alerting for \textbf{CPU, memory, pod health, and service availability}, improving operational visibility and troubleshooting efficiency.}
+      \resumeItemListEnd
+
     \resumeSubheading
       {Info Tech Senior Associate}{May 2022 -- Dec 2024}
       {NTT Data}{Bangalore, India}
@@ -214,6 +231,7 @@
     \resumeItem{\textbf{Production Operations:} Strong background in production operations, monitoring, and incident management across enterprise-scale systems.}
     \resumeItem{\textbf{Architecture Design:} Skilled in designing scalable multi-tier cloud architectures with a sharp focus on reliability, automation, and operational efficiency.}
     \resumeItem{\textbf{Networking \& Security:} Hands-on experience with cloud networking, security controls, and deployment governance across distributed environments.}
+    \resumeItem{\textbf{Containerization \& Kubernetes:} Hands-on experience with Docker, Amazon EKS, Kubernetes deployments, observability, auto-scaling, and containerized application delivery pipelines.}
   \resumeItemListEnd
 
 %-----------CERTIFICATIONS \& ACCOMPLISHMENTS-----------
